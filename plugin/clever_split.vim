@@ -2,9 +2,9 @@ if exists('g:loaded_clever_split')
     finish
 endif
 
-command! -nargs=* CleverHSplit call clever_split#split(<q-args>)
-command! -nargs=* CleverVSplit call clever_split#vsplit(<q-args>)
-command! -nargs=* CleverSplit call clever_split#clever_split(<q-args>)
+command! -nargs=* -complete=file_in_path CleverHSplit call clever_split#split(<q-args>)
+command! -nargs=* -complete=file_in_path CleverVSplit call clever_split#vsplit(<q-args>)
+command! -nargs=* -complete=file_in_path CleverSplit call clever_split#clever_split(<q-args>)
 command! -nargs=+ -complete=help CleverHelp call clever_split#help(<q-args>)
 
 if exists('g:clever_split#overwrite_default_mappings')
